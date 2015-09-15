@@ -15,7 +15,6 @@
 
     engine.defaultPath = "templates";
     engine.defaultSuffix = ".tmpl.html";
-    // engine.defaultRequireTextPluginName = "text";
 
     //create a template source that loads its template using the require.js text plugin
     ko.templateSources.requireTemplate = function(key) {
@@ -32,10 +31,6 @@
     ko.templateSources.requireTemplate.prototype.text = function(value) {
         //when the template is retrieved, check if we need to load it
         if (!this.requested && this.key) {
-            // require([engine.defaultRequireTextPluginName + "!" + addTrailingSlash(engine.defaultPath) + this.key + engine.defaultSuffix], function(templateContent) {
-            //     this.retrieved = true;
-            //     this.template(templateContent);
-            // }.bind(this));
             jQuery.get(addTrailingSlash(engine.defaultPath) + this.key + engine.defaultSuffix, function(templateContent) {
                 this.retrieved = true;
                 this.template(templateContent);
