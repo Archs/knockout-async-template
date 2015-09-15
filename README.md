@@ -3,7 +3,7 @@ KnockoutJS external template async loading using jQuery
 The code is mainly based on https://github.com/rniemeyer/knockout-amd-helpers/blob/master/src/amdTemplateEngine.js. Main changes here:
 
 1. Using `jQuery`  to load external template files instead of `RequireJS`
-2. Can be used with or without `RequireJS`
+2. Can be used with `normal script tag` or `RequireJS`
 
 ## Configuration
 
