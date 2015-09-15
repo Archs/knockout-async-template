@@ -12,12 +12,12 @@ The code is mainly based on https://github.com/rniemeyer/knockout-amd-helpers/bl
     ko.externalTemplateEngine.defaultSuffix = ".tmpl.html";
 ```
 
-# Example
+## Example
 For example, when using a binding like:
 
 ```javascript
     <ul data-bind="template: { name: 'itemView', foreach: items }"></ul>
 ```
 
-If there is no script tag with an id of itemView, it will attempt to load the template. The engine uses a default path of templates and a default suffix of .tmpl.html. So, it would look for the template at templates/itemView.tmpl.html. The default path and suffix can be configured 
-through `ko.externalTemplateEngine`.
+If there is no script tag with an id of itemView, it will attempt to load the template. The engine uses a default path of templates and a default suffix of .tmpl.html. So, it would look for the template at templates/itemView.tmpl.html. The default path and suffix can be configured through the attributes of
+`ko.externalTemplateEngine`.
